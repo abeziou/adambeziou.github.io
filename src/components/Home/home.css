@@ -1,0 +1,40 @@
+#home-splash {
+    /* Display options */
+    display: flex;
+    justify-content: flex-start;
+
+    /* Size options */
+    padding: 20px;
+    width: 50vw;
+    height: 30vh;
+
+    /* Positioning options */
+    position: fixed;
+    top: 35vh;
+    left: 25vw;
+
+    /* Color options */
+    color: white;
+    background: black;
+    border: 10px solid white;
+}
+
+#home-bg-canvas {
+    /* Display options */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Size options */
+    width: 100%;
+    height: 100vh;
+
+    /* Color options */
+    color: white;
+    background: black;
+}
+
+#abeziou-header {
+    font-size: 30px;
+    font-family: "Georgia";
+}
