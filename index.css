@@ -2,6 +2,7 @@ header {
     font-size: 25px;
 }
 body {
+    font-size: 20px;
     margin: 0px 0px;
     width: 100vw;
     height: 100vh;
@@ -24,31 +25,94 @@ hr {
 }
 h1 {
     margin: 0px;
-    padding: 10px;
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+h2 {
+    margin: 0px;
 }
 h3 {
-    margin: 10px 0px;
+    margin: 0px;
 }
-
+h4 {
+    margin: 0px;
+}
+h5 {
+    margin: 0px;
+}
+#bg-animation {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    z-index: 1;
+}
 #home-splash-section {
-    height: 100vh;
+    padding: 50px;
+    margin: 0px;
 
     background: #333333;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 1s ease;
 }
 #aboutme-section {
     background: #555555;
     color: white;
+    transition: all 1s ease;
+}
+#eduexpskills-section {
+    background: #555555;
+    color: white;
+    transition: all 1s ease;
+}
+#education-section {
+    display: flex;
+}
+#course-section {
+    display: flex;
+}
+#course-section ul {
+    margin: 0px;
+}
+#education-section img {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #dddddd;
+}
+#experience-section {
+    display: flex;
+}
+#skills-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#skills-section figure {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #dddddd;
+    color: black;
+    text-align: center;
+
+    min-width: 150px;
+    max-width: 300px;
 }
 #projects-section {
-    background: #333333;
+    background: #555555;
     color: white;
+    transition: all 1s ease;
 }
 .home-splash {
-    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     padding: 40px 30px;
     border-radius: 20px;
@@ -62,26 +126,44 @@ h3 {
 
     color: white;
 }
+.outside-links {
+    display: flex;
+}
+.outside-links img {
+    margin: 10px;
+    transition: all 0.2s;
+}
+.outside-links img:hover {
+    transform: scale(1.3);
+}
 .home-nav-buttons {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
-    width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 75%;
+    margin: 20px;
+
 }
 .home-nav-buttons a {
     background: transparent;
     color: white;
     border: 1px solid white;
     text-align: center;
+    line-height: 40px;
     font-size: 25px;
 
-    width: 350px;
+    height: 40px;
+    width: 125px;
     padding: 10px 10px;
     margin: 10px 10px;
 
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.2s ease;
+}
+.home-nav-buttons a:hover {
+    transform: scale(1.2);
 }
 
 .profile {
