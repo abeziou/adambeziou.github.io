@@ -4,148 +4,135 @@
     <head>
         <title>Adam Beziou</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" media="screen and (min-width: 900px)" href="desktop-style.css">
+        <link rel="stylesheet" media="screen and (max-width: 899px)" href="mobile-style.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <section id="home-side-bar">
-            <div class="home-splash">
-                <img src="images/portrait_3.jpg" height="100px" width="100px" class="profile">
-                <div class="outside-links">
+        <main>
+            <div id="home-side-bar">
+                <img src="images/portrait_3.jpg" height="150px" width="150px" id="profile-pic">
+                <div id="outside-links">
                     <a href="https://github.com/AdamBeziou"><img src="images/github_logo.png" width="25px" height="25px"></a>
                     <a href="https://gitlab.com/AdamBeziou"><img src="images/gitlab_logo.png" width="25px" height="25px" style="border-radius: 50%"></a>
                     <a href="https://www.linkedin.com/in/adam-beziou-312717147/"><img src="images/linkedin_logo.png" width="25px" height="25px"></a>
                     <a href="https://www.instagram.com/adambeziou/"><img src="images/insta_logo.png" width="25px" height="25px"></a>
                 </div>
-                <div class="home-nav-buttons">
+                <div id="nav-links">
                     <a href="#aboutme-section">About Me</a>
                     <a href="#eduexpskills-section">Education</a>
                     <a href="#projects-section">Projects</a>
                 </div>
             </div>
-        </section>
-        <section id="home-splash-section">
-            <canvas id="bg-animation"></canvas>
-            <div class="home-splash">
-                <img src="images/portrait_3.jpg" height="200px" width="200px" class="profile">
-                <div class="outside-links">
-                    <a href="https://github.com/AdamBeziou"><img src="images/github_logo.png" width="25px" height="25px"></a>
-                    <a href="https://gitlab.com/AdamBeziou"><img src="images/gitlab_logo.png" width="25px" height="25px" style="border-radius: 50%"></a>
-                    <a href="https://www.linkedin.com/in/adam-beziou-312717147/"><img src="images/linkedin_logo.png" width="25px" height="25px"></a>
-                    <a href="https://www.instagram.com/adambeziou/"><img src="images/insta_logo.png" width="25px" height="25px"></a>
-                </div>
-                <p>Hi! I'm Adam Beziou, a software-engineer-in-training</p>
-                <div class="home-nav-buttons">
-                    <a href="#aboutme-section">About Me</a>
-                    <a href="#eduexpskills-section">Education</a>
-                    <a href="#projects-section">Projects</a>
-                </div>
-            </div>
-        </section>
-        <hr />
-        <section id="aboutme-section">
-            <h1>About Me</h1>
-            <p style="font-weight: lighter">
-                I'm a junior studying computer science at the Colorado School of Mines and I'm from Colorado Springs, Colorado. <br />
-                I have strong interests in web development, simulations,
-                and game development, but I'm always pushing myself to learn more. <br />
-                When I'm not programming or studying,
-                I enjoy working out and exploring Colorado. <br />
-                Feel free to contact me at <u><a href="mailto:adam.beziou@gmail.com">adam.beziou@gmail.com</a></u>.
-            </p>
-        </section>
-        <hr />
-        <section id="eduexpskills-section">
-            <h1>Education</h1>
-            <div id="education-section">
-                <a href="https://www.mines.edu/"><img src="images/mines.png" width="75px" height="75px"></a>
-                <div>
-                    <h3 style="font-weight: lighter">Colorado School of Mines</h3>
-                    <h4 style="font-weight: lighter">B.S. Computer Science</h4>
-                    <br />
-                    <h4 style="font-weight: lighter">Coursework:</h5>
-                    <div id="course-section">
-                        <ul>
-                            <li>Software Engineering</li>
-                            <li>Advanced Software Engineering</li>
-                            <li>Data Structures</li>
-                            <li>Intro to Linux</li>
-                            <li>Programming Concepts</li>
-                            <li>Intro to Scientific Computing</li>
-                            <li>Intro to Computer Science</li>
-                            <li>Database Management</li>
-                        </ul>
-                        <ul>
-                            <li>Calculus I, II, III</li>
-                            <li>Differential Equations</li>
-                            <li>Discrete Math</li>
-                            <li>Probability and Statistics</li>
-                            <li>Linear Algebra</li>
-                        </ul>
+
+            <div id="content-sections">
+
+                <section id="aboutme-section">
+                    <h1>About Me</h1>
+                    <p style="font-weight: lighter">
+                        I'm a junior studying computer science at the Colorado School of Mines and I'm from Colorado Springs, Colorado. <br />
+                        I have strong interests in web development, simulations,
+                        and game development, but I'm always pushing myself to learn more. <br />
+                        When I'm not programming or studying,
+                        I enjoy working out and exploring Colorado. <br />
+                        Feel free to contact me at <u><a href="mailto:adam.beziou@gmail.com">adam.beziou@gmail.com</a></u>.
+                    </p>
+                </section>
+                <hr />
+                <section id="eduexpskills-section">
+                    <h1>Education</h1>
+                    <div id="education-section">
+                        <a href="https://www.mines.edu/"><img src="images/mines.png" width="75px" height="75px"></a>
+                        <div>
+                            <h3 style="font-weight: lighter">Colorado School of Mines</h3>
+                            <h4 style="font-weight: lighter">B.S. Computer Science</h4>
+                            <br />
+                            <h4 style="font-weight: lighter">Coursework:</h5>
+                            <div id="course-section">
+                                <ul>
+                                    <li>Software Engineering</li>
+                                    <li>Advanced Software Engineering</li>
+                                    <li>Data Structures</li>
+                                    <li>Intro to Linux</li>
+                                    <li>Programming Concepts</li>
+                                    <li>Intro to Scientific Computing</li>
+                                    <li>Intro to Computer Science</li>
+                                    <li>Database Management</li>
+                                </ul>
+                                <ul>
+                                    <li>Calculus I, II, III</li>
+                                    <li>Differential Equations</li>
+                                    <li>Discrete Math</li>
+                                    <li>Probability and Statistics</li>
+                                    <li>Linear Algebra</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-left: auto; margin-right: 20px">
+                            <h4 style="font-weight: lighter">August 2017 - Present</h4>
+                            <h4 style="font-weight: lighter">GPA 3.89</h4>
+                        </div>
                     </div>
-                </div>
-                <div style="margin-left: auto; margin-right: 20px">
-                    <h4 style="font-weight: lighter">August 2017 - Present</h4>
-                    <h4 style="font-weight: lighter">GPA 3.89</h4>
-                </div>
-            </div>
-            <h1>Skills</h1>
-            <div id="skills-section">
-                <figure>
-                    <a href="http://www.cplusplus.com/"><img src="images/cpp_logo.png" width="75px" height="75px"></a>
-                    <figcaption>C++</figcaption>
+                    <h1>Skills</h1>
+                    <div id="skills-section">
+                        <figure>
+                            <a href="http://www.cplusplus.com/"><img src="images/cpp_logo.png" width="75px" height="75px"></a>
+                            <figcaption>C++</figcaption>
                 </figure>
 
-                <figure>
-                    <a href="https://www.python.org/"><img src="images/python_logo.png" width="75px" height="75px"></a>
-                    <figcaption>Python 2/3</figcaption>
+                        <figure>
+                            <a href="https://www.python.org/"><img src="images/python_logo.png" width="75px" height="75px"></a>
+                            <figcaption>Python 2/3</figcaption>
                 </figure>
 
-                <figure>
-                    <a href="https://www.w3.org/html/"><img src="images/html5_logo.png" width="75px" height="75px"></a>
-                    <figcaption>HTML</figcaption>
-                </figure>
-                <figure>
-                    <a href="https://www.w3.org/Style/CSS/"><img src="images/css3_logo.png" width="75px" height="75px"></a>
-                    <figcaption>CSS</figcaption>
-                </figure>
-                <figure>
-                    <a href="https://www.javascript.com/"><img src="images/js_logo.png" width="75px" height="75px"></a>
-                    <figcaption>JavaScript</figcaption>
+                        <figure>
+                            <a href="https://www.w3.org/html/"><img src="images/html5_logo.png" width="75px" height="75px"></a>
+                            <figcaption>HTML</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="https://www.w3.org/Style/CSS/"><img src="images/css3_logo.png" width="75px" height="75px"></a>
+                            <figcaption>CSS</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="https://www.javascript.com/"><img src="images/js_logo.png" width="75px" height="75px"></a>
+                            <figcaption>JavaScript</figcaption>
                 </figure>
 
-                <figure>
-                    <a href="https://www.mathworks.com/products/matlab.html"><img src="images/matlab_logo.png" width="75px" height="75px"></a>
-                    <figcaption>MATLAB</figcaption>
-                </figure>
-            </div>
-            <h1>Experience</h1>
-            <div id="experience-section">
-                <div>
-                    <h3 style="font-weight: lighter">Hogue Hydrology Lab</h3>
-                    <br />
-                    <h4 style="font-weight: lighter">Student Researcher</h5>
-                    <div id="course-section">
-                        <ul>
-                            <li>
-                                Updated and developed SUSTAIN, a watershed simulation and BMP optimization tool,
-                                using C++ and C in Visual Studio, as well as a GUI front-end to the tool written in VBA
-                            </li>
-                            <li>Rewrote, generated, and hosted documentation using Doxygen and Heroku, implemented unit testing with Google Test, and used Git for version control</li>
-                            <li>Rewrote and maintained a legacy codebase comprising 300,000+ lines of code and 20+ classes</li>
-                        </ul>
+                        <figure>
+                            <a href="https://www.mathworks.com/products/matlab.html"><img src="images/matlab_logo.png" width="75px" height="75px"></a>
+                            <figcaption>MATLAB</figcaption>
+                        </figure>
                     </div>
-                </div>
-                <div style="margin-left: auto; margin-right: 20px">
-                    <h4 style="font-weight: lighter">October 2018 - Present</h4>
-                </div>
+                    <h1>Experience</h1>
+                    <div id="experience-section">
+                        <div>
+                            <h3 style="font-weight: lighter">Hogue Hydrology Lab</h3>
+                            <br />
+                            <h4 style="font-weight: lighter">Student Researcher</h5>
+                            <div id="course-section">
+                                <ul>
+                                    <li>
+                                        Updated and developed SUSTAIN, a watershed simulation and BMP optimization tool,
+                                        using C++ and C in Visual Studio, as well as a GUI front-end to the tool written in VBA
+                                    </li>
+                                    <li>Rewrote, generated, and hosted documentation using Doxygen and Heroku, implemented unit testing with Google Test, and used Git for version control</li>
+                                    <li>Rewrote and maintained a legacy codebase comprising 300,000+ lines of code and 20+ classes</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-left: auto; margin-right: 20px">
+                            <h4 style="font-weight: lighter">October 2018 - Present</h4>
+                        </div>
+                    </div>
+                </section>
+                <hr />
+                <section id="projects-section">
+                    <h1>Projects</h1>
+                    Coming Soon!
+                </section>
             </div>
-        </section>
-        <hr />
-        <section id="projects-section">
-            <h1>Projects</h1>
-            Coming Soon!
-        </section>
+        </main>
     </body>
 
 </html>
