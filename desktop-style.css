@@ -19,7 +19,13 @@ main {
     display: flex;
 }
 section {
-    padding: 0px 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    background: #222222;
+    color: white;
 }
 hr {
     margin: 0px;
@@ -44,11 +50,39 @@ h5 {
     margin: 0px;
 }
 
+#main-header {
+    height: 10vh;
+
+    background: #333333;
+    color: white;
+
+    border: 1px solid grey;
+
+    font-size: 40px;
+    text-align: center;
+    line-height: 10vh;
+}
+#main-footer {
+    height: 10vh;
+
+    background: #333333;
+    color: white;
+
+    border: 1px solid grey;
+
+    font-size: 40px;
+    text-align: center;
+    line-height: 10vh;
+}
+
 #home-side-bar {
     height: 100vh;
     margin: 0px;
 
     background: #333333;
+
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
 
     display: flex;
     align-self: flex-start;
@@ -86,14 +120,6 @@ h5 {
     font-size: 30px;
 }
 
-#aboutme-section {
-    background: #555555;
-    color: white;
-}
-#eduexpskills-section {
-    background: #555555;
-    color: white;
-}
 #education-section {
     display: flex;
 }
@@ -127,8 +153,4 @@ h5 {
 
     min-width: 150px;
     max-width: 300px;
-}
-#projects-section {
-    background: #555555;
-    color: white;
 }
