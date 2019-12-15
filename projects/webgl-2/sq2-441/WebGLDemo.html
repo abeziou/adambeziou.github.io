@@ -1,0 +1,61 @@
+<!– WebGLDemo.html -->
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../../css/webgl_demo.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<html>
+    <script src="../../common/gl-matrix-min.js"></script>
+    <script id="shader-vs" type="x-shader/x-vertex">#version 300 es
+        #define attribute in
+        in vec3 vPosition;
+        in vec4 vColor;
+
+        out vec4 theColor;
+
+        uniform mat4 modelViewMatrix;
+        uniform mat4 projMatrix;
+        uniform float time;
+
+        void main() {
+            //*****************************************
+            //********* Vertex Calculations  **********
+            //*****************************************
+            
+            mat4 mvpMatrix = projMatrix * modelViewMatrix;
+
+            vec3 newVertex;
+            if (vPosition.x > 0.0 && vPosition.y > 0.0 && vPosition.z > 0.0) {
+                newVertex = vPosition + 1.2 * (sin(time) + 1.0) / 2.0 - 0.2;
+            }
+            else {
+                newVertex = vPosition;
+            }
+
+            gl_Position = mvpMatrix * vec4(newVertex, 1.0);
+
+            theColor = vColor;
+        }
+    </script>
+    <script id="shader-fs" type="x-shader/x-fragment">#version 300 es
+        #define attribute in
+        precision mediump float;
+
+        in vec4 theColor;
+        out vec4 fragColorOut;
+
+        void main() {
+        
+            //*****************************************
+            //******* Final Color Calculations ********
+            //*****************************************
+
+            fragColorOut = theColor;
+        }
+    </script>
+    <script src="./js/WebGLDemo.js"></script>
+    
+    <body onload="webGLStart();">
+        <canvas id="webGLCanvas" class=“canvasClass”>
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </body>
+</html>
