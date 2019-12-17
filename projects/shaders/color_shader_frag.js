@@ -1,0 +1,17 @@
+const color_shader_frag = [
+"#version 300 es",
+"#define attribute in",
+"precision mediump float;",
+"",
+"in vec4 theColor;",
+"out vec4 fragColorOut;",
+"",
+"void main() {",
+"        ",
+"    //*****************************************",
+"    //******* Final Color Calculations ********",
+"    //*****************************************",
+"",
+"    fragColorOut = theColor;",
+"}",
+].join("\n");

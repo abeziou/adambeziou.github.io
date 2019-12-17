@@ -39,15 +39,19 @@ h1 {
 }
 h2 {
     margin: 0px;
+    font-weight: lighter;
 }
 h3 {
     margin: 0px;
+    font-weight: lighter;
 }
 h4 {
     margin: 0px;
+    font-weight: lighter;
 }
 h5 {
     margin: 0px;
+    font-weight: lighter;
 }
 
 #main-header {
@@ -153,4 +157,22 @@ h5 {
 
     min-width: 150px;
     max-width: 300px;
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.project-table td, th {
+    border: 2px solid grey;
+    text-align: left;
+}
+.project-table a {
+    text-decoration: underline;
+}
+.project-table a:link {
+    color: #0000EE; 
+}
+.project-table a:visited { 
+    color: #551A8B; 
 }

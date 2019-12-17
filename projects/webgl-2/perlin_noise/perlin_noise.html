@@ -1,11 +1,11 @@
 <!– WebGLDemo.html -->
 <!DOCTYPE html>
 <link rel="stylesheet" href="../../../css/webgl_demo.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 <html>
-    <script src="../../common/gl-matrix-min.js"></script>
-    <script id="shader-vs" src="../../shaders/color_shader_vert.js"></script>
-    <script id="shader-fs" src="../../shaders/color_shader_frag.js"></script>
-    <script src="./WebGLDemo.js"></script>
+    <script id="shader-vs" type="x-shader/x-vertex"></script>
+    <script id="shader-fs" type="x-shader/x-fragment"></script>
+    <script src="./noise_map.js"></script>
     
     <body onload="webGLStart();">
         <canvas id="webGLCanvas" class=“canvasClass”>
