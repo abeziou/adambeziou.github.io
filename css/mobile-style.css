@@ -1,3 +1,9 @@
+:root {
+    --bg-color:#222629;
+    --content-color:#2c3636;
+    --font-color: white;
+}
+
 header {
     font-size: 25px;
 }
@@ -6,6 +12,8 @@ body {
     margin: 0px 0px;
     height: 100%;
     font-family: 'Raleway';
+    color: var(--font-color);
+    background: var(--bg-color);
 }
 a {
     color: inherit;
@@ -16,10 +24,14 @@ p {
     padding: 10px;
 }
 main {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 section {
-    padding: 0px 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 hr {
     margin: 0px;
@@ -33,21 +45,37 @@ h1 {
 }
 h2 {
     margin: 0px;
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: lighter;
 }
 h3 {
     margin: 0px;
+    font-weight: lighter;
 }
 h4 {
+    font-size: 20px;
     margin: 0px;
+    font-weight: lighter;
 }
 h5 {
     margin: 0px;
+    font-weight: lighter;
+}
+
+#main-header {
+    display: none;
+}
+#main-footer {
+    display: none;
 }
 
 #home-side-bar {
     margin: 0px;
+    width: 100%;
 
-    background: #333333;
+    border-bottom: 1px solid grey;
 
     display: flex;
     align-self: flex-start;
@@ -68,6 +96,7 @@ h5 {
     width: 35px;
     height: 35px;
     margin: 10px;
+    border-radius: 50%;
     transition: all 0.2s;
 }
 #outside-links img:hover {
@@ -75,27 +104,34 @@ h5 {
 }
 #nav-links {
     color: white;
-    display: inline;
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 #nav-links a {
-    margin: 10px;
+    margin: 20px;
     font-size: 30px;
 }
 
-#aboutme-section {
-    background: #555555;
-    color: white;
+#aboutme-section p {
+    background: var(--content-color);
+    border-radius: 20px;
+    margin: 10px;
 }
-#eduexpskills-section {
-    background: #555555;
-    color: white;
+
+#resume-section section {
+    background: var(--content-color);
+    border-radius: 20px;
+    margin: 10px;
 }
 #education-section {
     display: flex;
+    flex-direction: column;
 }
 #course-section {
     display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 #course-section ul {
     margin: 0px;
@@ -108,13 +144,30 @@ h5 {
 }
 #experience-section {
     display: flex;
+    flex-direction: column;
 }
 #skills-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#projects-section section {
+    background: var(--content-color);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.split-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.figure-row {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-#skills-section figure {
+.figure-row figure {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -125,7 +178,25 @@ h5 {
     min-width: 150px;
     max-width: 300px;
 }
-#projects-section {
-    background: #555555;
-    color: white;
+.figure-row img {
+    width: 75px;
+    height: 75px;
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.project-table td, th {
+    border: 2px solid grey;
+    text-align: left;
+}
+.project-table a {
+    text-decoration: underline;
+}
+.project-table a:link {
+    color: #0000EE; 
+}
+.project-table a:visited { 
+    color: #551A8B; 
 }
