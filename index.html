@@ -2,199 +2,64 @@
 <html>
     <meta charset="UTF-8">
     <head>
-        <title>abeziou</title>
-
-        <meta name="Description" content="Hi, I'm Adam. Welcome to my website!">
-
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" media="only screen and (min-width: 800px)" href="css/desktop-style.css">
-        <link rel="stylesheet" media="only screen and (max-width: 801px)" href="css/mobile-style.css">
-
+        <link rel="stylesheet" href="index.css">
         <link rel="icon" href="favicon.ico">
-        
-        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     </head>
 
     <body id="content-body">
-
-        <header id="main-header">abeziou</header>
-
-        <main id="main-body">
-            <!-- Navigation sidebar -->
-            <nav id="home-side-bar">
-                <img src="images/portrait.jpg" id="profile-pic">
-                <!-- Links to outside resources -->
-                <div id="outside-links">
-                    <a href="https://github.com/AdamBeziou"><img src="images/github_logo.png"></a>
-                    <a href="https://gitlab.com/AdamBeziou"><img src="images/gitlab_logo.png"></a>
-                    <a href="https://www.linkedin.com/in/adam-beziou-312717147/"><img src="images/linkedin_logo.png"></a>
-                    <a href="https://www.instagram.com/adambeziou/"><img src="images/insta_logo.png"></a>
-                </div>
-                <!-- Links to sections on page -->
-                <div id="nav-links">
-                    <a href="#aboutme-section">About</a>
-                    <a href="#resume-section">Resume</a>
-                    <a href="#projects-section">Projects</a>
-                </div>
-            </nav>
-
-            <!-- Content -->
-            <section id="content-sections">
-
-                <section id="aboutme-section">
-                    <h1>About Me</h1>
-                    <p>
-                        I'm a junior studying computer science at the Colorado School of Mines and I'm from Colorado Springs, Colorado. <br />
-                        I have strong interests in web development, simulations,
-                        and game development, but I'm always pushing myself to learn more. <br />
-                        When I'm not programming or studying,
-                        I enjoy working out and exploring Colorado. <br />
-                        Feel free to contact me at <u><a href="mailto:adam.beziou@gmail.com">adam.beziou@gmail.com</a></u>.
-                    </p>
-                </section>
-                
-                <hr/>
-
-                <section id="resume-section">
-                    <header class="split-header">
-                        <h1>Resume</h1>
-                    </header>
-
-                    <section id="education-section">
-                        <h2>Education</h2>
-                        <header class="split-header">
-                            <div>
-                                <a href="https://www.mines.edu/"><h4>Colorado School of Mines</h4></a>
-                                <h4>B.S. Computer Science</h4>
-                            </div>
-                            <div>
-                                <h4>August 2017 - Present</h4>
-                                <h4>GPA 3.8</h4>
-                            </div>
-                        </header>
-                            
-                        <div id="course-section">
-                            <h4>Coursework:</h4>
-                            <ul>
-                                <li>Software Engineering</li>
-                                <li>Advanced Software Engineering</li>
-                                <li>Data Structures</li>
-                                <li>Intro to Linux</li>
-                                <li>Programming Concepts</li>
-                                <li>Intro to Scientific Computing</li>
-                                <li>Intro to Computer Science</li>
-                                <li>Database Management</li>
-                                <li>Computer Graphics</li>
-                                <li>Algorithms</li>
-                                <li>Operating Systems</li>
-                                <li>Advanced Software Engineering</li>
-                            </ul>
-                            <ul>
-                                <li>Calculus I, II, III</li>
-                                <li>Differential Equations</li>
-                                <li>Discrete Math</li>
-                                <li>Probability and Statistics</li>
-                                <li>Linear Algebra</li>
-                                <li>Partial Differential Equations</li>
-                            </ul>
-                        </div>
-                        <div style="margin-left: auto; margin-right: 20px">
-                            
-                        </div>
-                    </section>
-
-                    <section id="skills-section">
-                        <h2>Skills</h2>
-                        <div class="figure-row">
-                            <figure>
-                                <a href="http://www.cplusplus.com/"><img src="images/cpp_logo.png"></a>
-                                <figcaption>C++</figcaption>
-                            </figure>
-                            <figure>
-                                <a href="https://www.python.org/"><img src="images/python_logo.png"></a>
-                                <figcaption>Python 2/3</figcaption>
-                            </figure>
-                            <figure>
-                                <a href="https://www.w3.org/html/"><img src="images/html5_logo.png"></a>
-                                <figcaption>HTML</figcaption>
-                            </figure>
-                            <figure>
-                                <a href="https://www.w3.org/Style/CSS/"><img src="images/css3_logo.png"></a>
-                                <figcaption>CSS</figcaption>
-                            </figure>
-                            <figure>
-                                <a href="https://www.javascript.com/"><img src="images/js_logo.png"></a>
-                                <figcaption>JavaScript</figcaption>
-                            </figure>
-                            <figure>
-                                <a href="https://www.mathworks.com/products/matlab.html"><img src="images/matlab_logo.png"></a>
-                                <figcaption>MATLAB</figcaption>
-                            </figure>
-                        </div>
-                    </section>
-
-                    <section id="experience-section">
-                        <h2>Experience</h2>
-                        <header class="split-header">
-                            <h4>Hogue Hydrology Lab</h4>
-                            <h4>October 2018 - Present</h4>
-                        </header>
-        
-                        <h4>Student Researcher</h5>
-                        <div id="course-section">
-                            <ul>
-                                <li>
-                                    Updated and developed SUSTAIN, a watershed simulation and BMP optimization tool,
-                                    using C++ and C in Visual Studio, as well as a GUI front-end to the tool written in VBA
-                                </li>
-                                <li>Rewrote, generated, and hosted documentation using Doxygen and Heroku, implemented unit testing with Google Test, and used Git for version control</li>
-                                <li>Rewrote and maintained a legacy codebase comprising 300,000+ lines of code and 20+ classes</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                </section>
-                
-                <hr />
-
-                <section id="projects-section">
-                    <h1>Projects</h1>
-                    <section>
-                        <div class="figure-row">
-                            <figure>
-                                <a href="https://github.com/AdamBeziou/HashMap"><img src="images/hashmap.png" ></a>
-                                <figcaption>HashMap</figcaption>
-                            </figure>
-                            <figure>
-                                <a href="https://github.com/AdamBeziou/Conway"><img src="images/conway.png"></a>
-                                <figcaption>Conway</figcaption>
-                            </figure>
-                            <figure>
-                                <a href="https://github.com/AdamBeziou/Wallpaper_Project"><img src="images/wallpaper.png" ></a>
-                                <figcaption>Wallpaper Project</figcaption>
-                            </figure>
-                        </div>
-                    </section>
-                    <section>
-                        <h2>WebGL 2.0 Demos</h2>
-                        <table class="project-table">
-                            <tr>
-                                <th>Project</th>
-                                <th>Description</th>                                                                                                                                                                                       
-                            </tr>
-                            <tr>
-                                <td><a href="projects/webgl-2/sq2-441/WebGLDemo.html">Computer Graphics SQ2</a></th>
-                                <td>Fly through a (very basic) city using the WASD keys and mouse. Click and drag to move the viewport around. WebGL port of a Computer graphics (CSCI 440) assignment.</th>
-                            </tr>
-                        </table>
-                    </section>          
-                </section>
-
-            </div>
+        <main>
+            <pre>
+  _______________________
+/ Hi, I'm Adam.           \
+| I write code sometimes. |
+| Check out my <a href="https://github.com/AdamBeziou" target="_blank">GitHub</a>,    |
+| <a href="https://www.linkedin.com/in/adam-beziou-312717147/" target="_blank">LinkedIn</a>, and <a href="https://abeziou.github.io/files/resume.pdf" type="application/pdf" target="_blank">resume</a>.   | 
+| Anyways, here's a joke: |
+</pre>
+<pre id="joke">
+\ JavaScript.             /
+</pre><pre>
+  -----------------------
+   \   ^__^ 
+    \  (oo)\_______
+       (__)\       )\/\
+           ||----w |
+           ||     ||
+wwwwwwwwwwwwwwwwwwwwwwwwwww</pre>
         </main>
 
-        <footer id="main-footer"></footer>
+        <script>
+            function formatPhrase(phrase, width) {
+                const splitPhrase = phrase.match(new RegExp(`.{1,${width - 1}}\\b[\\s|\\.|\!]`, 'g'))
+                return splitPhrase
+                    .map((str, i) => {
+                        if (i === splitPhrase.length - 1) {
+                            return "\\ " + str + " ".repeat(width - str.length) + " /\n"
+                        } else {
+                            return "| " + str + " ".repeat(width - str.length) + " |\n"
+                        }
+                    })
+                    .join("")
+            }
 
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+
+            const WIDTH = 23
+            const ALL_PHRASES = [
+                "Why did the blind man fall into the well? Because he couldn't see that well!",
+                "Why can’t you play soccer with pigs? They hog the ball!",
+                "Why are frogs rarely angry? They eat whatever bugs them!",
+                "What did the hotdog say after the race? I'm the wiener!"
+            ]
+
+            let phrase = ALL_PHRASES[getRandomInt(0, ALL_PHRASES.length)]
+            document.getElementById("joke").innerHTML = formatPhrase(phrase, WIDTH);
+        </script> 
     </body>
 
 </html>
