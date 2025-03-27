@@ -4,63 +4,30 @@
     <head>
         <title>Adam Beziou</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="I'm Adam Beziou, a full-stack software engineer">
         <link rel="stylesheet" href="index.css">
         <link rel="icon" href="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
 
     <body id="content-body">
+        <header>
+            <span id="">
+                <div id="heading-blurb">
+                    <h1>Hi, I'm Adam</h1>
+                    <h4>Full-Stack Software Engineer</h4>
+                    <span id="social-media-icons-row">
+                        <img src="images/github.svg" />
+                        <img src="images/linkedin.svg" />
+                        <img src="images/gmail.svg" />
+                    </span>
+                </div>
+                <img src="images/portrait.jpg" id="portrait">
+            </span>
+        </header>
         <main>
-            <pre>
-  _______________________
-/ Hi, I'm Adam.           \
-| I write code sometimes. |
-| Check out my <a href="https://github.com/AdamBeziou" target="_blank">GitHub</a>,    |
-| <a href="https://www.linkedin.com/in/adam-beziou-312717147/" target="_blank">LinkedIn</a>, and <a href="files/resume.pdf" type="application/pdf" target="_blank">resume</a>.   |
-| Anyways, here's a joke: |
-</pre>
-<pre id="joke">
-\ JavaScript.             /
-</pre><pre>
-  -----------------------
-   \   ^__^
-    \  (oo)\_______
-       (__)\       )\/\
-           ||----w |
-           ||     ||
-wwwwwwwwwwwwwwwwwwwwwwwwwww</pre>
         </main>
-
-        <script>
-            function formatPhrase(phrase, width) {
-                const splitPhrase = phrase.match(new RegExp(`.{1,${width - 1}}\\b[\\s|\\.|\!]`, 'g'))
-                return splitPhrase
-                    .map((str, i) => {
-                        if (i === splitPhrase.length - 1) {
-                            return "\\ " + str + " ".repeat(width - str.length) + " /\n"
-                        } else {
-                            return "| " + str + " ".repeat(width - str.length) + " |\n"
-                        }
-                    })
-                    .join("")
-            }
-
-            function getRandomInt(min, max) {
-                min = Math.ceil(min);
-                max = Math.floor(max);
-                return Math.floor(Math.random() * (max - min)) + min;
-            }
-
-            const WIDTH = 23
-            const ALL_PHRASES = [
-                "Why did the blind man fall into the well? Because he couldn't see that well!",
-                "Why can’t you play soccer with pigs? They hog the ball!",
-                "Why are frogs rarely angry? They eat whatever bugs them!",
-                "What did the hotdog say after the race? I'm the wiener!"
-            ]
-
-            let phrase = ALL_PHRASES[getRandomInt(0, ALL_PHRASES.length)]
-            document.getElementById("joke").innerHTML = formatPhrase(phrase, WIDTH);
-        </script>
     </body>
-
 </html>
