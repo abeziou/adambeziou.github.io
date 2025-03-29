@@ -11,14 +11,18 @@ body {
     background: var(--bg-color);
     margin: 5% 15% 5% 15%
 }
+
+#header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: xx-large;
+}
 #portrait {
     border-radius: 50%;
-    width: 3em
-}
-#heading-blurb {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
+    width: 11rem;
+    height: 11rem;
+    margin: 0 0 0 3em;
 }
 #heading-blurb {
     display: flex;
@@ -26,11 +30,11 @@ body {
     flex-direction: column;
 }
 #heading-blurb > * {
-    margin: 0.83em 0 0 0;
+    margin: 0 0 0.5rem 0;
 }
 #social-media-icons-row > img {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1em;
+    height: 1em;
 }
 .heading-row {
     margin: 0;
