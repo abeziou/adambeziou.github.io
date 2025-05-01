@@ -1,0 +1,44 @@
+---
+import '../globals.css'
+import TopHeader from '../components/TopHeader.astro'
+import WorkTimeline from '../components/WorkTimeline.astro'
+import '@fontsource-variable/inter';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Adam Beziou</title>
+		<meta name="description" content="I'm Adam Beziou, a full-stack software engineer">
+	</head>
+	<body>
+		<TopHeader />
+		<main class="aboutme-sections">
+            <section>
+                <h3>Work Experience</h3>
+                <WorkTimeline />
+            </section>
+            <section>
+                <h3>Projects</h3>
+                <div class="coming-soon">Coming soon!</div>
+            </section>
+        </main>
+	</body>
+</html>
+
+<style>
+	body {
+		font-family: 'Inter Variable', sans-sarif;
+		font-style: normal;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: var(--font-color);
+		background: var(--bg-color);
+		margin: 5% 5% 5% 5%
+	}
+</style>
