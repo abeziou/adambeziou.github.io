@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets'
+import '../globals.css'
+import portraitImg from '../images/portrait.jpg'
+---
+
+<header>
+    <div id="heading-blurb">
+        <h1>Hi, I'm Adam</h1>
+        <h2>Senior Software Engineer @ Fanatics</h2>
+        <span id="social-media-icons-row">
+            <a href="https://github.com/abeziou">
+                GithHub
+            </a>
+            |
+            <a href="https://www.linkedin.com/in/adam-beziou-312717147">
+                LinkedIn
+            </a>
+            |
+            <a href="mailto:adam.beziou@gmail.com">
+                Email
+            </a>
+            |
+            <a href="../../public/resume.pdf" type="application/pdf" target="_blank">
+                Resume
+            </a>
+        </span>
+    </div>
+    <Image src={portraitImg} alt="Adam Beziou" id="portrait" />
+</header>
+
+<style>
+    header {
+        display: flex;
+        align-content: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        flex-grow: 1;
+    }
+    header > * {
+        margin: 0 1em 0 1em;
+    }
+    header h1 {
+        font-size: var(--h1-size);
+        margin: 0;
+    }
+    header h2 {
+        font-size: var(--h2-size);
+        font-weight: normal;
+        margin: 0 0 0.5rem 0;
+    }
+    #portrait {
+        border-radius: 50%;
+        width: 11rem;
+        height: 11rem;
+        align-self: center;
+    }
+    #heading-blurb {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+    }
+    #heading-blurb > #social-media-icons-row {
+        margin: 0 0 0.5rem 0;
+    }
+    #heading-blurb > #social-media-icons-row a {
+        padding: 0 0.25em;
+    }
+    #heading-blurb > * {
+        text-align: center;
+    }
+</style>

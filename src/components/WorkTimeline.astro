@@ -1,0 +1,106 @@
+---
+import '../globals.css'
+import TechTag from './TechTag.astro'
+---
+
+<div>
+    <!-- Fanatics -->
+    <div class="work-card">
+        <h3 class="work-header">
+            <span class="work-header-title">
+                <div>
+                    Senior Software Engineer @ Fanatics
+                </div>
+                <div class="light-title">
+                    SWE III, II, I, and Technology Intern
+                </div>
+            </span>
+            <span class="work-header-dates">
+                December 2020 - Present
+            </span>
+        </h3>
+        <div class="work-description">
+            <ul>
+                <li>
+                    Tech lead for the integrations team, engineer on the pricing and promotion team, 
+                    and engineer on the enterprise tax team
+                </li>
+                <li>
+                    Built tools using React and Golang to manage pricing & promotions on sites like NFL shop, NHL shop, and NBA store
+                </li>
+                <li>
+                    Migrated warehouse data pipelines from MuleSoft to Golang to save hundreds of thousands
+                    of dollars in operational expenses annually 
+                </li>
+                <li>
+                    Built integrations with Thomson-Reuters' OneSource tax platform in Java
+                </li>
+            </ul>
+        </div>
+        <div class="tech-tag-row">
+            <TechTag label="Golang" />
+            <TechTag label="JavaScript" />
+            <TechTag label="Java" />
+        </div>
+    </div>
+
+    <!-- Hogue Hydrology Lab -->
+    <div class="work-card">
+        <h3 class="work-header">
+            <span class="work-header-title">
+                <div>
+                    Student Researcher @ Hogue Hydrology Lab
+                </div>
+            </span>
+            <span class="work-header-dates">
+                October 2018 - December 2020
+            </span>
+        </h3>
+        <div class="work-description">
+            <ul>
+                <li>
+                    Built a watershed simulation tool for the <a href="https://idst.mines.edu/" target="_blank">iDST toolset</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tech-tag-row">
+            <TechTag label="C++" />
+            <TechTag label="Excel VBA" hue={60} />
+        </div>
+    </div>
+</div>
+
+<style>
+    .work-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .work-header {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+        font-weight: normal;
+        margin: 0 0 1em;
+    }
+    .work-header-title {
+        padding: 0 3em 0 0;
+    }
+    .work-header-dates {
+        font-weight: 200;
+    }
+    .light-title {
+        font-weight: 200;
+    }
+    .work-description {
+        margin: 0 0 1em;
+    }
+    .work-description ul {
+        padding: 0 0 0 1em;
+        margin: 0;
+    }
+    .tech-tag-row {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 1em;
+    }
+</style>

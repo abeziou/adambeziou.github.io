@@ -1,0 +1,5 @@
+:root {
+    --bg-color: #F4F4F5;
+    --h1-size: min(3em, 10vw);
+    --h2-size: calc(var(--h1-size) * 0.5);
+}
