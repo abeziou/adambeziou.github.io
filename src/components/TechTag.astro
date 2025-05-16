@@ -1,0 +1,24 @@
+---
+const { label, hue } = Astro.props;
+
+const labelHue = (label as string).split('').reduce((result, char) => {
+    return (result + char.charCodeAt(0)) % 360
+}, 0)
+const tagColor = `hsl(${hue ? hue : labelHue}, 50%, 85%)`
+---
+
+<span 
+    class="tech-tag" 
+    style={{ "background-color": `${tagColor}`}}
+>
+    {label}
+</span>
+<style>
+    .tech-tag {
+        margin: 0.1em;
+        padding: 0.5em;
+        font-size: small;
+        border-radius: 0.5rem;
+    }
+</style>
+
