@@ -1,73 +1,73 @@
 ---
 import '../globals.css'
 import TechTag from './TechTag.astro'
+import type { SanityDocument } from "@sanity/client";
+import { sanityClient } from "sanity:client";
+import { PortableText } from 'astro-portabletext';
+
+const WORK_HISTORY_QUERY = `*[
+  _type == "workHistory"
+]|order(startDate desc)[0...12]{
+    _id, 
+    company, 
+    title, 
+    startDate, 
+    endDate, 
+    bullets,
+    technologies
+}`;
+
+const monthToName = new Map([
+    [0, "January"],
+    [1, "February"],
+    [2, "March"],
+    [3, "April"],
+    [4, "May"],
+    [5, "June"],
+    [6, "July"],
+    [7, "August"],
+    [8, "September"],
+    [9, "October"],
+    [10, "November"],
+    [11, "December"]
+])
+
+const formatDate = (date: Date) => {
+    date = new Date(date)
+    if (!date) {
+        return "Present"
+    }
+    return `${monthToName.get(date.getMonth())} ${date.getFullYear()}`
+}
+
+const workHistory = await sanityClient.fetch<SanityDocument[]>(WORK_HISTORY_QUERY);
 ---
 
 <div>
-    <!-- Fanatics -->
-    <div class="work-card">
-        <h3 class="work-header">
-            <span class="work-header-title">
-                <div>
-                    Senior Software Engineer @ Fanatics
+    {
+        workHistory.map((job) => (
+            <div class="work-card">
+                <h3 class="work-header">
+                    <span class="work-header-title">
+                        <div>
+                            {job.title} @ {job.company}
+                        </div>
+                    </span>
+                    <span class="work-header-dates">
+                        {formatDate(job.startDate)} - {formatDate(job.endDate)}
+                    </span>
+                </h3>
+                <div class="work-description">
+                    <PortableText value={job.bullets} />
                 </div>
-                <div class="light-title">
-                    SWE III, II, I, and Technology Intern
+                <div class="tech-tag-row">
+                    {
+                        job.technologies?.map((techName: string) => <TechTag label={techName} />)
+                    }
                 </div>
-            </span>
-            <span class="work-header-dates">
-                December 2020 - Present
-            </span>
-        </h3>
-        <div class="work-description">
-            <ul>
-                <li>
-                    Tech lead for the integrations team, engineer on the pricing and promotion team, 
-                    and engineer on the enterprise tax team
-                </li>
-                <li>
-                    Built tools using React and Golang to manage pricing & promotions on sites like NFL shop, NHL shop, and NBA store
-                </li>
-                <li>
-                    Migrated warehouse data pipelines from MuleSoft to Golang to save hundreds of thousands
-                    of dollars in operational expenses annually 
-                </li>
-                <li>
-                    Built integrations with Thomson-Reuters' OneSource tax platform in Java
-                </li>
-            </ul>
-        </div>
-        <div class="tech-tag-row">
-            <TechTag label="Golang" />
-            <TechTag label="JavaScript" />
-            <TechTag label="Java" />
-        </div>
-    </div>
-
-    <!-- Hogue Hydrology Lab -->
-    <div class="work-card">
-        <h3 class="work-header">
-            <span class="work-header-title">
-                <div>
-                    Student Researcher @ Hogue Hydrology Lab
-                </div>
-            </span>
-            <span class="work-header-dates">
-                October 2018 - December 2020
-            </span>
-        </h3>
-        <div class="work-description">
-            <ul>
-                <li>
-                    Built a watershed simulation tool for the <a href="https://idst.mines.edu/" target="_blank">iDST toolset</a>
-                </li>
-            </ul>
-        </div>
-        <div class="tech-tag-row">
-            <TechTag label="C++" />
-            <TechTag label="Excel VBA" hue={60} />
-        </div>
-    </div>
+            </div>
+        ))
+    }
 </div>
 
 <style>
